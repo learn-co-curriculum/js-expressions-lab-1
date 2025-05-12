@@ -73,3 +73,44 @@ describe('index.js', function () {
     });
 
 });
+const {
+    tot_temperature_in_fahrenheit,
+    tot_temperature_in_celsius,
+    avg_temperature_in_fahrenheit,
+    avg_temperature_in_celsius
+  } = require('../index'); // Adjust path as necessary to import index.js
+  
+  describe('Temperature Calculations', function() {
+    it('tot_temperature_in_fahrenheit is a floating number', function() {
+      expect(tot_temperature_in_fahrenheit).to.be.a('number');
+    });
+  
+    it('tot_temperature_in_fahrenheit is accurate with a tolerance of 0.2 degrees', function() {
+      expect(tot_temperature_in_fahrenheit).to.be.closeTo(2171.2, 0.2);
+    });
+  
+    it('tot_temperature_in_celsius is a floating number', function() {
+      expect(tot_temperature_in_celsius).to.be.a('number');
+    });
+  
+    it('tot_temperature_in_celsius is accurate with a tolerance of 0.2 degrees', function() {
+      expect(tot_temperature_in_celsius).to.be.closeTo(672.89, 0.2);
+    });
+  
+    it('avg_temperature_in_fahrenheit is a floating number', function() {
+      expect(avg_temperature_in_fahrenheit).to.be.a('number');
+    });
+  
+    it('avg_temperature_in_fahrenheit is accurate with a tolerance of 0.2 degrees', function() {
+      expect(avg_temperature_in_fahrenheit).to.be.closeTo(72.37, 0.2);
+    });
+  
+    it('avg_temperature_in_celsius is a floating number', function() {
+      expect(avg_temperature_in_celsius).to.be.a('number');
+    });
+  
+    it('avg_temperature_in_celsius is accurate with a tolerance of 0.2 degrees', function() {
+      expect(avg_temperature_in_celsius).to.be.closeTo(22.43, 0.2);
+    });
+  });
+  
